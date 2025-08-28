@@ -6,6 +6,82 @@
   box-sizing: border-box;
 }
 
+:root {
+  --primary-text-color: #1f2937;
+  --sec-text-color: #9ca3af;
+  --background-color: #f0f0f0;
+  --primary-accent: #346ec9;
+  --sec-accent: #e5e7eb;
+  --completed-color: #80b156;
+  --high-priority: #d6542c;
+  --medium-priority: #061E28;
+  --low-priority: #3c345c;
+}
+
 html {
   height: 100%;
+}
+
+body {
+  margin: auto;
+  border: 1px solid;
+  min-height: 100%;
+  width: 100%;
+  max-width: 1000px;
+  display: grid;
+  grid-template-rows: 100px 1fr 100px;
+  justify-content: center;
+  padding-inline: 1em;
+}
+
+header {
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--primary-text-color);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+#add-task-field {
+  background-color: var(--sec-text-color);
+  border-radius: 0.5em;
+  box-shadow: 5px 5px var(--sec-accent);
+  padding: 1em;
+}
+
+#add-task {
+  display: flex;
+  flex-direction: column;
+}
+
+#add-task>input,
+#add-task>select {
+  margin-block: 0.5em;
+  padding: 0.5em;
+  border: 1px solid var(--sec-text-color);
+}
+
+#add-task>input::placeholder {
+  font-size: 1rem;
+  color: var(--sec-text-color);
+}
+
+
+#add-task>button {
+  background-color: var(--primary-accent);
+  margin-top: 0.5em;
+  padding: 0.5em 1em;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+footer {
+  /* background-color: aqua; */
 }
