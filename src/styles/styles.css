@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap');
+
 *,
 *::before,
 *::after {
@@ -29,7 +31,7 @@ html {
 
 body {
   margin: auto;
-  border: 1px solid;
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
   min-height: 100%;
   width: 100%;
   max-width: 1000px;
@@ -38,6 +40,8 @@ body {
   justify-content: center;
   padding-inline: 1em;
   background-color: var(--background-color);
+  box-shadow: 3px 0 3px rgba(0, 0, 0, 0.1);
+  font-family: Helvetica, sans-serif;
 }
 
 header {
@@ -54,10 +58,13 @@ main {
 }
 
 #add-task-field {
+  margin-inline: auto;
   background-color: var(--sec-accent);
   border-radius: 0.5em;
   box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.1);
   padding: 1em;
+  width: 100%;
+  max-width: 400px;
 }
 
 #add-task {
@@ -105,8 +112,7 @@ footer>address {
   align-items: center;
   justify-content: center;
   padding: 1em;
-  font-style: italic;
-  font-weight: bold;
+  font-family: "Caveat Brush";
 }
 
 footer .social-icons {
