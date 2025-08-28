@@ -130,7 +130,7 @@ footer .social-icons i:hover {
 .task-item {
   max-width: 600px;
   list-style: none;
-  padding: 0.5em 0.3em;
+  padding: 0.5em 2em 0.5em 0.3em;
   border-radius: 0.5em;
   border: 1px solid var(--sec-text-color);
   box-shadow: 3px 3px rgba(0, 0, 0, 0.1);
@@ -147,7 +147,8 @@ footer .social-icons i:hover {
   font-weight: bold;
 }
 
-.delete-tasks {
+.delete-tasks,
+.edit-tasks {
   position: absolute;
   top: 5px;
   right: 5px;
@@ -156,4 +157,14 @@ footer .social-icons i:hover {
   font-size: 0.7rem;
   border: 1px solid var(--primary-text-color);
   cursor: pointer;
+  width: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.edit-tasks {
+  top: 60px;
+  padding: 0.2em;
 }

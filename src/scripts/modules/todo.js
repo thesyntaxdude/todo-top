@@ -23,10 +23,10 @@ export default class Todo {
     priorityField,
     folderField
   ) {
-    taskField.textContent = this.task;
-    dueDateField.textContent = this.dueDate;
-    dueTimeField.textContent = this.dueTime;
-    priorityField.textContent = this.priority;
-    folderField.textContent = this.folder;
+    taskField.value = this.task;
+    dueDateField.value = this.dueDate;
+    dueTimeField.value = this.dueTime;
+    priorityField.value = this.priority;
+    folderField.value = this.folder;
   }
 }
