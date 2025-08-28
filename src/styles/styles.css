@@ -112,4 +112,10 @@ footer>address {
 footer .social-icons {
   font-size: 2rem;
   margin-top: 0.3em;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer .social-icons i:hover {
+  scale: 0.9;
 }
