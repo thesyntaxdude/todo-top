@@ -7,7 +7,6 @@ addedTasksField.addEventListener("click", (e) => {
   if (e.target.classList.contains("delete-tasks")) {
     taskList.forEach((task) => {
       if (e.target.parentElement.getAttribute("data-uid") === task.uid) {
-        console.log("hey there");
         const index = taskList.indexOf(task);
         const deleteTodo = new Todo();
         deleteTodo.deleteTask(taskList, index);
