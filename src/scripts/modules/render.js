@@ -1,6 +1,6 @@
 import taskList from "./save";
 
-const addedTasksField = document.querySelector("#added-tasks-field");
+export const addedTasksField = document.querySelector("#added-tasks-field");
 
 export default function renderTasks() {
   addedTasksField.textContent = "";
@@ -13,6 +13,7 @@ export default function renderTasks() {
     const deleteBtn = document.createElement("button");
 
     taskContainer.classList.add("task-item");
+    taskContainer.setAttribute("data-uid", task.uid);
     deleteBtn.classList.add("delete-tasks");
 
     taskName.innerHTML = `<span>TASK:</span> ${task.task}`;
@@ -32,7 +33,7 @@ export default function renderTasks() {
         taskContainer.style.borderLeft = "5px solid var(--high-priority)";
         break;
       default:
-        throw Error("Unexpected Error. Try again later.");
+        taskContainer.style.borderLeft = "5px solid var(--low-priority)";
     }
 
     taskContainer.appendChild(taskName);

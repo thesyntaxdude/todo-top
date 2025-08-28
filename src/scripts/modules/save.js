@@ -15,6 +15,7 @@ addTaskBtn.addEventListener("click", (e) => {
 
   const todoTask = new Todo(task, dueDate, dueTime, priority, folder);
   todoTask.addTask(taskList);
+
   renderTasks();
 
   document.querySelector("#task-name").value = "";

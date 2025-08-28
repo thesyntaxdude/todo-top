@@ -5,6 +5,7 @@ export default class Todo {
     this.dueTime = dueTime;
     this.priority = priority;
     this.folder = folder;
+    this.uid = crypto.randomUUID();
   }
 
   addTask(taskList) {
