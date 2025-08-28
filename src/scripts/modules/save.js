@@ -1,7 +1,7 @@
 import Todo from "./todo";
 import renderTasks from "./render";
 
-const taskList = [];
+const taskList = JSON.parse(localStorage.getItem("todoTasks")) || [];
 export default taskList;
 
 const addTaskBtn = document.querySelector("#submit");
@@ -15,7 +15,7 @@ addTaskBtn.addEventListener("click", (e) => {
 
   const todoTask = new Todo(task, dueDate, dueTime, priority, folder);
   todoTask.addTask(taskList);
-
+  localStorage.setItem("todoTasks", JSON.stringify(taskList));
   renderTasks();
 
   document.querySelector("#task-name").value = "";

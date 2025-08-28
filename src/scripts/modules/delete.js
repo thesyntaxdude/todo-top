@@ -11,6 +11,7 @@ addedTasksField.addEventListener("click", (e) => {
         const index = taskList.indexOf(task);
         const deleteTodo = new Todo();
         deleteTodo.deleteTask(taskList, index);
+        localStorage.setItem("todoTasks", JSON.stringify(taskList));
         render();
       }
     });
