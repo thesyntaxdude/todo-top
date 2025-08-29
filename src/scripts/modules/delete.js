@@ -2,6 +2,8 @@ import { addedTasksField } from "./render";
 import render from "./render";
 import taskList from "./save";
 import Todo from "./todo";
+import renderFolders from "./renderFoldeFilter";
+import { folderContainer } from "./renderFoldeFilter";
 
 export default function deleteTodo() {
   addedTasksField.addEventListener("click", (e) => {
@@ -13,6 +15,7 @@ export default function deleteTodo() {
           deleteTodo.deleteTask(taskList, index);
           localStorage.setItem("todoTasks", JSON.stringify(taskList));
           render();
+          location.reload();
         }
       });
     }

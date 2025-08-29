@@ -1,9 +1,13 @@
 import taskList from "./save";
 import dayjs from "dayjs";
+import renderFolders from "./renderFoldeFilter";
+import { folderContainer } from "./renderFoldeFilter";
 
 export const addedTasksField = document.querySelector("#added-tasks-field");
+export const folderList = [];
 
 export default function renderTasks() {
+  folderContainer.textContent = "";
   addedTasksField.textContent = "";
   taskList.forEach((task) => {
     const taskContainer = document.createElement("ul");
@@ -18,6 +22,8 @@ export default function renderTasks() {
     taskContainer.setAttribute("data-uid", task.uid);
     deleteBtn.classList.add("delete-tasks");
     editBtn.classList.add("edit-tasks");
+
+    folderList.push(task.folder);
 
     taskName.innerHTML = `<span>TASK:</span> ${task.task}`;
     taskDueDate.innerHTML = `<span>DUE DATE:</span> ${new dayjs(
@@ -50,4 +56,5 @@ export default function renderTasks() {
     taskContainer.appendChild(editBtn);
     addedTasksField.appendChild(taskContainer);
   });
+  renderFolders(folderList);
 }

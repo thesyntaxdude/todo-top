@@ -93,7 +93,8 @@ main {
 #added-tasks-field {
   width: 100%;
   margin-block: 3em;
-
+  display: flex;
+  flex-direction: column-reverse;
 }
 
 #add-task>button {
@@ -167,4 +168,21 @@ footer .social-icons i:hover {
 .edit-tasks {
   top: 60px;
   padding: 0.2em;
+}
+
+.folder-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.folder-list-container {
+  /* background-color: blue; */
+  list-style: none;
+}
+
+.folder-list-container>li {
+  padding: 0.5em;
+  border: 1px solid var(--sec-text-color);
+  width: min-content;
+  border-radius: 1em;
 }
