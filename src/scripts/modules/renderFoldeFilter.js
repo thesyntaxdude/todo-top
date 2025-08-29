@@ -8,6 +8,7 @@ export default function renderFolderButtons(folderList) {
     const folderListContainer = document.createElement("ul");
     const folderItem = document.createElement("li");
     folderItem.textContent = folder;
+    folderItem.classList.add("folder-item");
     folderListContainer.classList.add("folder-list-container");
     folderContainer.classList.add("folder-container");
     folderListContainer.appendChild(folderItem);
